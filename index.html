@@ -5,11 +5,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Hanken+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--void:#080a18;--hull:#12162e;--hull2:#1c2246;--line:#2b3366;--amber:#ffb347;--ice:#9fe8ff;--rose:#ff6b8a;--ink:#e8ecff;--mute:#8e97c0;color-scheme:dark}
+:root{--void:#030006;--hull:#140919;--hull2:#220f2e;--line:#4a2262;--amber:#ffb347;--ice:#9fe8ff;--rose:#ff6b8a;--ink:#e8ecff;--mute:#b49ac8;color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%}
-body{background:var(--void);color:var(--ink);font:400 16px/1.6 'Hanken Grotesk',system-ui,sans-serif;
-background-image:radial-gradient(1px 1px at 12% 20%,#fff9 50%,transparent),radial-gradient(1px 1px at 70% 12%,#fff8 50%,transparent),radial-gradient(1.5px 1.5px at 85% 60%,#9fe8ffaa 50%,transparent),radial-gradient(1px 1px at 30% 75%,#fff7 50%,transparent),radial-gradient(1px 1px at 55% 90%,#fff6 50%,transparent),radial-gradient(ellipse at 90% 0%,#2a1f5a 0,transparent 50%);
+body{background:#030006;color:var(--ink);font:400 16px/1.6 'Hanken Grotesk',system-ui,sans-serif;
 padding:max(16px,env(safe-area-inset-top,0px)) 16px max(16px,env(safe-area-inset-bottom,0px))}
 h1,h2,h3{font-family:'Chakra Petch',sans-serif;margin:0;font-weight:700;letter-spacing:.02em}
 .app{max-width:1020px;margin:0 auto;display:grid;grid-template-columns:270px 1fr;gap:16px}
@@ -21,11 +20,11 @@ h1,h2,h3{font-family:'Chakra Petch',sans-serif;margin:0;font-weight:700;letter-s
 .gauge svg{width:84px;height:84px;flex:none}
 .gauge b{font:700 13px 'Chakra Petch';display:block}
 .gauge span{color:var(--mute);font-size:13px}
-.bar{height:6px;border-radius:4px;background:#0a0d22;overflow:hidden;margin-top:6px}
+.bar{height:6px;border-radius:4px;background:#09040f;overflow:hidden;margin-top:6px}
 .bar i{display:block;height:100%;background:var(--ice);transition:width .4s}
 .stat{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px solid var(--line)}
 .stat small{color:var(--mute);display:block;line-height:1.3}
-.stat em{font:700 20px 'Chakra Petch';font-style:normal;min-width:22px;text-align:center}
+.stat em{font:700 20px 'Chakra Petch';font-style:normal;min-width:38px;text-align:center}.stat em u{text-decoration:none;font-size:12px;color:var(--mute)}
 .plus{width:30px;height:30px;border-radius:8px;border:1px solid var(--amber);background:transparent;color:var(--amber);font-size:18px;cursor:pointer}
 .plus:hover{background:#ffb34722}
 .main h2{font-size:24px;margin-bottom:4px}
@@ -38,11 +37,11 @@ button.alt:hover:not(:disabled){border-color:var(--ice)}
 button.alt:disabled{opacity:.45;cursor:not-allowed}
 button:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
 .grid3{display:grid;grid-template-columns:repeat(3,76px);gap:8px;margin:14px 0}
-.cell{width:76px;height:76px;border-radius:10px;border:1px solid var(--line);background:#0a0d22;cursor:pointer;transition:.15s}
+.cell{width:76px;height:76px;border-radius:10px;border:1px solid var(--line);background:#09040f;cursor:pointer;transition:.15s}
 .cell.on{background:var(--amber);box-shadow:0 0 20px #ffb34788}
 .cell.hint{outline:3px solid var(--ice);outline-offset:2px}
 .digits{display:flex;gap:10px;margin:12px 0}
-.dig{width:64px;height:72px;border-radius:10px;border:1px solid var(--ice);background:#0a0d22;color:var(--ink);font:700 30px 'Chakra Petch';cursor:pointer}
+.dig{width:64px;height:72px;border-radius:10px;border:1px solid var(--ice);background:#09040f;color:var(--ink);font:700 30px 'Chakra Petch';cursor:pointer}
 .dig.lock{border-color:var(--amber);color:var(--amber);cursor:default}
 .hist{font:500 14px 'Chakra Petch';color:var(--mute);margin:8px 0}
 .hist div{padding:3px 0}
@@ -51,7 +50,7 @@ button:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
 .opt{display:block;width:100%;text-align:left;margin-top:8px}
 .tag{color:var(--amber);font-weight:600}
 .pods{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0}
-.pod{border:1px solid var(--line);border-radius:12px;padding:12px;background:#0a0d22}
+.pod{border:1px solid var(--line);border-radius:12px;padding:12px;background:#09040f}
 .pod h3{font-size:16px}
 .pod q{display:block;color:var(--mute);margin:6px 0 4px;font-style:italic}
 .pod .t{font-size:13px;font-weight:600}
@@ -59,8 +58,33 @@ button:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
 .msg{min-height:24px;margin-top:10px;color:var(--amber);font-weight:600}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--hull2);border:1px solid var(--amber);color:var(--amber);padding:10px 18px;border-radius:10px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .3s}
 .toast.show{opacity:1}
-#sky{position:fixed;inset:0;width:100%;height:100%;z-index:-1}.app{position:relative}.log{color:var(--mute);font-size:13px;font-style:italic;border-left:2px solid var(--amber);padding-left:10px}.cipher{font:700 22px 'Chakra Petch';letter-spacing:.12em;color:var(--ice);background:#0a0d22;border:1px solid var(--line);border-radius:10px;padding:14px;margin:12px 0;word-break:break-word}.dial{display:flex;align-items:center;gap:10px}.dial b{font:700 20px 'Chakra Petch';min-width:90px;text-align:center}.crates{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin:12px 0}.crate{border:1px solid var(--line);border-radius:10px;background:#0a0d22;padding:8px;text-align:center}.crate button.c{display:block;width:100%;height:46px;border-radius:8px;border:0;background:#3a4280;color:var(--ink);font:700 13px 'Chakra Petch';cursor:pointer}.crate.l button.c{background:var(--ice);color:#06202a}.crate.r button.c{background:var(--amber);color:#1a1200}.crate.bad{opacity:.35}.crate .alt{margin:6px 0 0;padding:5px 10px;font-size:12px}.pads{display:grid;grid-template-columns:repeat(2,120px);gap:14px;margin:14px 0}.pad{height:84px;border-radius:18px;border:0;opacity:.3;cursor:pointer;transition:opacity .1s,box-shadow .1s}.pad.lit{opacity:1;box-shadow:0 0 36px currentColor}.low{color:var(--rose)}.panel{backdrop-filter:blur(6px)}.hud{box-shadow:0 0 44px #4a3a9a33}.hud .title{font-size:26px;line-height:1.1}.stat em{color:var(--amber)}.trail{display:flex;gap:5px}.trail i{flex:1;height:8px;border-radius:4px;background:#0a0d22;border:1px solid var(--line)}.trail i.d{background:var(--ice);border-color:var(--ice)}.trail i.c{background:var(--amber);border-color:var(--amber);box-shadow:0 0 10px #ffb347aa}.app.home{grid-template-columns:1fr;max-width:760px}.hero{text-align:center;padding:30px 4px}.hero h1{font-size:clamp(36px,8vw,60px);margin:18px 0 6px}.hero .lead{color:var(--mute);max-width:44ch;margin:0 auto}.orb{width:150px;height:150px;border-radius:50%;margin:0 auto;position:relative;background:radial-gradient(circle at 32% 28%,#fff9 0 3%,var(--amber) 14%,#a14a2a 46%,#1a1030 78%);box-shadow:0 0 60px #ffb34755,inset -20px -14px 30px #0008;animation:bob 6s ease-in-out infinite}.orb:after{content:'';position:absolute;left:-44px;right:-44px;top:58px;height:36px;border:2px solid #9fe8ffaa;border-radius:50%;transform:rotate(-18deg)}@keyframes bob{50%{transform:translateY(-8px)}}.menu{display:flex;flex-direction:column;gap:10px;max-width:300px;margin:26px auto 0}.big{width:100%;padding:14px;font-size:16px;margin:0!important;text-align:center}.how{text-align:left;max-width:560px;margin:22px auto 0;color:var(--mute);font-size:14px}.how b{color:var(--ink)}.how li{margin:4px 0}.plist{columns:2;padding-left:20px}.tank{position:relative;width:92px;border:2px solid var(--ice);border-radius:8px;overflow:hidden;background:#0a0d22}.tank i{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(var(--ice),#4a8cff);transition:height .3s}.tank span{position:absolute;top:6px;left:0;right:0;text-align:center;font:700 13px 'Chakra Petch';z-index:1}.tanks{display:flex;align-items:flex-end;gap:18px;margin:14px 0}button.alt.hint{outline:2px solid var(--amber)}@media(prefers-reduced-motion:reduce){.orb{animation:none}}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:-1}.app{position:relative}.log{color:var(--mute);font-size:13px;font-style:italic;border-left:2px solid var(--amber);padding-left:10px}.cipher{font:700 22px 'Chakra Petch';letter-spacing:.12em;color:var(--ice);background:#09040f;border:1px solid var(--line);border-radius:10px;padding:14px;margin:12px 0;word-break:break-word}.dial{display:flex;align-items:center;gap:10px}.dial b{font:700 20px 'Chakra Petch';min-width:90px;text-align:center}.crates{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin:12px 0}.crate{border:1px solid var(--line);border-radius:10px;background:#09040f;padding:8px;text-align:center}.crate button.c{display:block;width:100%;height:46px;border-radius:8px;border:0;background:#3a4280;color:var(--ink);font:700 13px 'Chakra Petch';cursor:pointer}.crate.l button.c{background:var(--ice);color:#06202a}.crate.r button.c{background:var(--amber);color:#1a1200}.crate.bad{opacity:.35}.crate .alt{margin:6px 0 0;padding:5px 10px;font-size:12px}.pads{display:grid;grid-template-columns:repeat(2,120px);gap:14px;margin:14px 0}.pad{height:84px;border-radius:18px;border:0;opacity:.3;cursor:pointer;transition:opacity .1s,box-shadow .1s}.pad.lit{opacity:1;box-shadow:0 0 36px currentColor}.low{color:var(--rose)}.panel{backdrop-filter:blur(6px)}.hud{box-shadow:0 0 44px #a1206a40}.hud .title{font-size:26px;line-height:1.1}.stat em{color:var(--amber)}.trail{display:flex;gap:5px}.trail i{flex:1;height:8px;border-radius:4px;background:#09040f;border:1px solid var(--line)}.trail i.d{background:var(--ice);border-color:var(--ice)}.trail i.c{background:var(--amber);border-color:var(--amber);box-shadow:0 0 10px #ffb347aa}.app.home{grid-template-columns:1fr;max-width:760px}.hero{text-align:center;padding:30px 4px}.hero h1{font-size:clamp(36px,8vw,60px);margin:10px 0 6px}.hero .lead{color:var(--mute);max-width:44ch;margin:0 auto}.menu{display:flex;flex-direction:column;gap:10px;max-width:300px;margin:26px auto 0}.big{width:100%;padding:14px;font-size:16px;margin:0!important;text-align:center}.how{text-align:left;max-width:560px;margin:22px auto 0;color:var(--mute);font-size:14px}.how b{color:var(--ink)}.how li{margin:4px 0}.plist{columns:2;padding-left:20px}.tank{position:relative;width:92px;border:2px solid var(--ice);border-radius:8px;overflow:hidden;background:#09040f}.tank i{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(var(--ice),#4a8cff);transition:height .3s}.tank span{position:absolute;top:6px;left:0;right:0;text-align:center;font:700 13px 'Chakra Petch';z-index:1}.tanks{display:flex;align-items:flex-end;gap:18px;margin:14px 0}button.alt.hint{outline:2px solid var(--amber)}@media(prefers-reduced-motion:reduce){.gal,.shipwrap,.ship,.flame,.lt{animation:none!important}.shipwrap{left:60%}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+body::before{content:'';position:fixed;inset:-25%;z-index:-2;pointer-events:none;transform:rotate(-24deg);
+background:
+ radial-gradient(ellipse 70% 13% at 50% 50%,rgba(255,235,245,.30),transparent 70%),
+ radial-gradient(ellipse 80% 22% at 50% 50%,rgba(255,40,80,.38),rgba(160,30,190,.24) 50%,transparent 78%),
+ radial-gradient(ellipse 90% 34% at 50% 50%,rgba(110,30,190,.30),transparent 75%),
+ radial-gradient(circle at 18% 24%,rgba(130,40,220,.34),transparent 38%),
+ radial-gradient(circle at 84% 78%,rgba(225,25,70,.30),transparent 40%),
+ radial-gradient(circle at 78% 14%,rgba(90,20,150,.32),transparent 34%),
+ radial-gradient(circle at 12% 86%,rgba(190,20,60,.22),transparent 36%),
+ #030006}
+
+.stage{position:relative;max-width:580px;height:230px;margin:0 auto;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.gtilt{position:absolute;left:50%;top:50%;width:300px;height:300px;margin:-150px 0 0 -150px;transform:rotate(-16deg) scaleY(.6)}
+.gal{width:100%;height:100%;background:var(--gal) center/contain no-repeat;border-radius:50%;animation:gspin 160s linear infinite;filter:drop-shadow(0 0 22px rgba(255,40,100,.55))}
+@keyframes gspin{to{transform:rotate(360deg)}}
+.shipwrap{position:absolute;top:34%;left:-120px;width:100px;animation:drift 22s linear infinite}
+@keyframes drift{from{left:-120px}to{left:100%}}
+.ship{animation:bobship 3.6s ease-in-out infinite alternate;filter:drop-shadow(0 0 8px rgba(190,90,255,.6))}
+@keyframes bobship{from{transform:translateY(-12px) rotate(-4deg)}to{transform:translateY(10px) rotate(3deg)}}
+.ship svg{display:block;width:100%;height:auto;overflow:visible}
+.flame{transform-box:fill-box;transform-origin:100% 50%;animation:flame .14s ease-in-out infinite alternate}
+@keyframes flame{from{transform:scaleX(.55);opacity:.7}to{transform:scaleX(1.25);opacity:1}}
+.lt{animation:flick 2.3s steps(1,end) infinite}
+.lt.b{animation-duration:3.1s;animation-delay:-.7s}.lt.c{animation-duration:1.7s;animation-delay:-1.2s}.lt.d{animation-duration:2.9s;animation-delay:-.3s}
+@keyframes flick{0%{opacity:1}12%{opacity:.1}16%{opacity:1}44%{opacity:1}47%{opacity:.15}50%{opacity:.9}53%{opacity:.1}58%{opacity:1}86%{opacity:1}89%{opacity:.2}100%{opacity:1}}
 </style></head>
 <body>
 <canvas id="sky" aria-hidden="true"></canvas><div class="app">
@@ -79,23 +103,30 @@ const QUIP={1:'Ship log: the lights flicker. Somebody left in a hurry.',2:'Ship 
 const ORDER=[1,2,6,7,9,3,8,10,11,4],PN=['Reactor Deck','Cipher Door','Comms Array','Cargo Hold','Sensor Array','WREN','Beacon Console','Airlock','Interrogation','Pod Bay'],PS=['Engineering','Cryptology','Cryptology','Engineering','Cryptology','Empathy','Perception','Engineering','Empathy','Perception'];;
 function sfx(k,n){if(mute)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const t=AC.currentTime,o=AC.createOscillator(),g=AC.createGain(),f={bad:[200,.28,'sawtooth'],good:[660,.1,'triangle'],win:[660,.35,'triangle'],note:[[392,523,659,784][n||0],.3,'sine']}[k];o.type=f[2];o.frequency.setValueAtTime(f[0],t);if(k==='win')o.frequency.linearRampToValueAtTime(1320,t+.3);if(k==='bad')o.frequency.linearRampToValueAtTime(80,t+.26);g.gain.setValueAtTime(.05,t);g.gain.exponentialRampToValueAtTime(.001,t+f[1]);o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+f[1])}catch(e){}}
 function shake(){const a=document.querySelector('.app');if(a&&a.animate&&!matchMedia('(prefers-reduced-motion:reduce)').matches)a.animate([{transform:'translateX(0)'},{transform:'translateX(-7px)'},{transform:'translateX(7px)'},{transform:'translateX(-4px)'},{transform:'translateX(0)'}],{duration:280})}
-(()=>{const c=$('sky'),x=c.getContext('2d'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;let W,H,st=[];function rs(){W=c.width=innerWidth;H=c.height=innerHeight;st=Array.from({length:120},()=>({x:Math.random()*W,y:Math.random()*H,z:Math.random()*2+.4}))}rs();addEventListener('resize',rs);(function f(){x.clearRect(0,0,W,H);for(const s of st){if(!rm){s.x-=s.z*.3;if(s.x<0)s.x=W}x.fillStyle='rgba(200,225,255,'+(.2+s.z*.25)+')';x.fillRect(s.x,s.y,s.z,s.z)}requestAnimationFrame(f)})()})();
+(()=>{const c=$('sky'),x=c.getContext('2d'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;let W,H,st=[];function rs(){W=c.width=innerWidth;H=c.height=innerHeight;st=Array.from({length:170},()=>({x:Math.random()*W,y:Math.random()*H,z:Math.random()*2+.4,c:[[255,255,255],[255,110,140],[200,140,255]][Math.floor(Math.random()*3)]}))}rs();addEventListener('resize',rs);(function f(){x.clearRect(0,0,W,H);for(const s of st){if(!rm){s.x-=s.z*.3;if(s.x<0)s.x=W}x.fillStyle='rgba('+s.c+','+(.25+s.z*.25)+')';x.fillRect(s.x,s.y,s.z,s.z)}requestAnimationFrame(f)})()})();
+
+(()=>{const N=520,c=document.createElement('canvas');c.width=c.height=N;const x=c.getContext('2d'),C=N/2;x.globalCompositeOperation='lighter';
+let g=x.createRadialGradient(C,C,0,C,C,C*.92);g.addColorStop(0,'rgba(255,235,242,.95)');g.addColorStop(.07,'rgba(255,130,160,.65)');g.addColorStop(.28,'rgba(200,40,120,.24)');g.addColorStop(.6,'rgba(110,30,190,.12)');g.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=g;x.fillRect(0,0,N,N);
+for(let i=0;i<16000;i++){const arm=i%4,t=Math.pow(Math.random(),.85),r=12+t*(C-26),a=arm*Math.PI/2+t*5+(Math.random()-.5)*(.7-.35*t)+ (Math.random()<.2?(Math.random()-.5)*1.2:0),px=C+Math.cos(a)*r,py=C+Math.sin(a)*r,col=t<.22?'255,200,215':t<.55?'255,70,100':'175,80,255',al=.18+Math.random()*.5,sz=.6+Math.random()*1.4;x.fillStyle='rgba('+col+','+al+')';x.fillRect(px,py,sz,sz)}
+for(let i=0;i<260;i++){const a=Math.random()*6.283,r=Math.random()*C*.95;x.fillStyle='rgba(255,255,255,'+(.4+Math.random()*.5)+')';x.fillRect(C+Math.cos(a)*r,C+Math.sin(a)*r,1.2,1.2)}
+let m=x.createRadialGradient(C,C,C*.55,C,C,C);document.documentElement.style.setProperty('--gal','url('+c.toDataURL()+')')})();
 const need=()=>S.lv*60;
 function toast(t){const e=$('toast');e.textContent=t;e.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('show'),2200)}
-function addXp(n){S.xp+=n;sfx('win');toast('+'+n+' XP');while(S.xp>=need()){S.xp-=need();S.lv++;S.pts++;setTimeout(()=>toast('Level '+S.lv+'. You have a stat point to spend.'),900)}}
+function addXp(n){S.xp+=n;sfx('win');toast('+'+n+' XP');while(S.xp>=need()){S.xp-=need();S.lv++;S.pts++;setTimeout(()=>toast(canSpend()?'Level '+S.lv+'. You have a stat point to spend.':'Level '+S.lv+'. All skills are maxed.'),900)}}
 function drain(n){S.o2=Math.max(0,S.o2-n);if(n>=3){sfx('bad');shake()}if(S.o2===0){S.fail=S.ch;S.ch=-1}}
-function spend(k){if(S.pts>0){S.pts--;S.st[k]++;render()}}
+const MAXST=5,canSpend=()=>S.pts>0&&Object.values(S.st).some(v=>v<MAXST);
+function spend(k){if(S.pts>0&&S.st[k]<MAXST){S.pts--;S.st[k]++;render()}}
 function go(c){S.ch=c;S.p={};LOG=QUIP[c]||LOG;S.o2=Math.min(100,S.o2+30);render()}
 function retry(){S.o2=60;S.ch=S.fail;S.p={};render()}
 
 function hud(){
   const C=2*Math.PI*34,off=C*(1-S.o2/100),col=S.o2<30?'var(--rose)':'var(--ice)';
   $('hud').innerHTML=`<h1 class="title">Meridian Drift</h1>
-  <div class="gauge"><svg viewBox="0 0 84 84" role="img" aria-label="Oxygen ${S.o2} percent"><circle cx="42" cy="42" r="34" fill="none" stroke="#0a0d22" stroke-width="9"/><circle cx="42" cy="42" r="34" fill="none" stroke="${col}" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${off}" transform="rotate(-90 42 42)"/><text x="42" y="47" text-anchor="middle" fill="#e8ecff" font-family="Chakra Petch" font-weight="700" font-size="17">${S.o2}</text></svg>
+  <div class="gauge"><svg viewBox="0 0 84 84" role="img" aria-label="Oxygen ${S.o2} percent"><circle cx="42" cy="42" r="34" fill="none" stroke="#09040f" stroke-width="9"/><circle cx="42" cy="42" r="34" fill="none" stroke="${col}" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${off}" transform="rotate(-90 42 42)"/><text x="42" y="47" text-anchor="middle" fill="#e8ecff" font-family="Chakra Petch" font-weight="700" font-size="17">${S.o2}</text></svg>
   <div><b class="${S.o2<30?'low':''}">Oxygen</b><span>Mistakes cost air. Finished rooms refill some.</span></div></div>
   <div><b style="font-family:'Chakra Petch'">Level ${S.lv}</b> <span style="color:var(--mute);font-size:13px">${S.xp} / ${need()} XP</span><div class="bar"><i style="width:${S.xp/need()*100}%"></i></div></div>
-  <div>${Object.keys(NAMES).map(k=>`<div class="stat"><div>${NAMES[k][0]}<small>${NAMES[k][1]}</small></div><div style="display:flex;align-items:center;gap:6px"><em>${S.st[k]}</em>${S.pts>0?`<button class="plus" onclick="spend('${k}')" aria-label="Add a point to ${NAMES[k][0]}">+</button>`:''}</div></div>`).join('')}
-  ${S.pts>0?`<span class="tag">${S.pts} stat point${S.pts>1?'s':''} to spend</span>`:''}</div>
+  <div>${Object.keys(NAMES).map(k=>`<div class="stat"><div>${NAMES[k][0]}<small>${NAMES[k][1]}</small></div><div style="display:flex;align-items:center;gap:6px"><em>${S.st[k]}<u>/${MAXST}</u></em>${S.st[k]>=MAXST?'<span class="tag" style="font-size:12px;min-width:30px;text-align:center">MAX</span>':S.pts>0?`<button class="plus" onclick="spend('${k}')" aria-label="Add a point to ${NAMES[k][0]}">+</button>`:''}</div></div>`).join('')}
+  ${canSpend()?`<span class="tag">${S.pts} stat point${S.pts>1?'s':''} to spend</span>`:''}</div>
   <div class="log">${LOG}</div><div class="trail" aria-label="Progress">${ORDER.map((c,i)=>{const n=ORDER.indexOf(S.ch<0?S.fail:S.ch);return `<i class="${S.ch===5||i<n?'d':i===n?'c':''}" title="${PN[i]}"></i>`}).join('')}</div><button class="alt" onclick="S.home=true;render()">Main menu</button><button class="alt" onclick="mute=!mute;render()">Sound ${mute?'off':'on'}</button>`;
 }
 
@@ -223,17 +254,17 @@ function ch7(){
  ${p.done?`<div class="msg">Crate ${p.h+1} was the heavy one. The hatch key is yours.</div><button class="go" onclick="go(9)">Descend to the sensor array</button>`:`<button class="go" onclick="weigh()" ${p.w<1?'disabled':''}>Weigh (${p.w} left)</button><div class="msg">${p.msg}</div>`}`}
 
 /* ---------- Chapter 6: beacon memory ---------- */
-const PADS=['#ff6b8a','#ffb347','#9fe8ff','#9d8cff'];
+const NB=7,PADS=['#ff6b8a','#ffb347','#9fe8ff','#9d8cff'];
 function playSeq(){const p=S.p;if(p.show||p.rep<1)return;p.rep--;p.show=true;p.pos=0;p.msg='Watch closely...';render();
- p.seq.forEach((v,i)=>{setTimeout(()=>{if(S.p!==p)return;p.lit=v;sfx('note',v);render()},600+i*750);setTimeout(()=>{if(S.p!==p)return;p.lit=-1;if(i===4){p.show=false;p.msg='Your turn. Repeat the pattern.'}render()},1050+i*750)})}
+ p.seq.forEach((v,i)=>{setTimeout(()=>{if(S.p!==p)return;p.lit=v;sfx('note',v);render()},500+i*520);setTimeout(()=>{if(S.p!==p)return;p.lit=-1;if(i===NB-1){p.show=false;p.msg='Your turn. Repeat the pattern.'}render()},500+i*520+330)})}
 function padHit(i){const p=S.p;if(p.show||p.done||!p.seq)return;sfx('note',i);p.lit=i;
- if(i===p.seq[p.pos]){p.pos++;if(p.pos>=5){p.done=true;p.lit=-1;addXp(100)}else p.msg='Step '+p.pos+' of 5 locked.'}
- else{p.pos=0;p.msg='Wrong beacon. The console shorts out.';drain(8)}
+ if(i===p.seq[p.pos]){p.pos++;if(p.pos>=NB){p.done=true;p.lit=-1;addXp(100)}else p.msg='Step '+p.pos+' of '+NB+' locked.'}
+ else{p.pos=0;p.msg='Wrong beacon. The console shorts out.';drain(10)}
  render();if(!p.done)setTimeout(()=>{if(S.p===p){p.lit=-1;render()}},180)}
 function ch8(){
- if(!S.p.seq)S.p={seq:Array.from({length:5},()=>Math.floor(Math.random()*4)),pos:0,show:false,lit:-1,rep:S.st.per+1,done:false,msg:'Press Watch to see the beacon pattern.'};
+ if(!S.p.seq)S.p={seq:Array.from({length:NB},()=>Math.floor(Math.random()*4)),pos:0,show:false,lit:-1,rep:Math.max(1,S.st.per-1),done:false,msg:'Press Watch to see the beacon pattern.'};
  const p=S.p;
- return `<h2>Navigation Console</h2><p class="sub">Chapter 6 of 7</p><p>Four beacons flash in a five-step pattern. Repeat it to lock in a safe course. A slip costs 8 oxygen and restarts your input. Perception gives you more replays.</p>
+ return `<h2>Navigation Console</h2><p class="sub">Chapter 6 of 7</p><p>Four beacons flash fast in a seven-step pattern. Repeat it to lock in a safe course. A slip costs 10 oxygen and restarts your input. You get few replays, and Perception gives you more.</p>
  <div class="pads">${PADS.map((c,i)=>`<button class="pad ${p.lit===i?'lit':''}" style="background:${c};color:${c}" onclick="padHit(${i})" aria-label="Beacon ${i+1}"></button>`).join('')}</div>
  ${p.done?`<div class="msg">Course locked. The pods are your last hurdle.</div><button class="go" onclick="go(10)">Reach the airlock</button>`:`<button class="alt" onclick="playSeq()" ${p.show||p.rep<1?'disabled':''}>Watch pattern (${p.rep} left)</button><div class="msg">${p.msg}</div>`}`}
 
@@ -248,13 +279,20 @@ function ch9(){
 
 /* ---------- Puzzle 8: airlock tanks ---------- */
 const jn=(s,m)=>{let[a,b]=s;if(m===0)a=5;if(m===1)b=3;if(m===2)a=0;if(m===3)b=0;if(m===4){const t=Math.min(a,3-b);a-=t;b+=t}if(m===5){const t=Math.min(b,5-a);b-=t;a+=t}return[a,b]},JM=['Fill A','Fill B','Drain A','Drain B','Pour A into B','Pour B into A'];
-function jmv(m){const p=S.p;if(p.done)return;p.j=jn(p.j,m);p.hint=-1;drain(1);if(S.ch===-1)return render();if(p.j[0]===4){p.done=true;addXp(90)}render()}
-function jHint(){const p=S.p;if(p.h<1||p.done)return;const k=s=>s[0]+','+s[1],q=[[p.j,-1]],seen=new Set([k(p.j)]);while(q.length){const[s,f]=q.shift();if(s[0]===4){p.hint=f;break}for(let m=0;m<6;m++){const t=jn(s,m);if(!seen.has(k(t))){seen.add(k(t));q.push([t,f<0?m:f])}}}p.h--;render()}
+const jDone=p=>p.stage?p.j[0]===4:p.j[1]===1;
+function jmv(m){const p=S.p;if(p.done||p.s0)return;p.j=jn(p.j,m);p.hint=-1;drain(1);if(S.ch===-1)return render();
+ if(jDone(p)){if(p.stage){p.done=true;addXp(50)}else{p.s0=true;addXp(40)}}render()}
+function jNext(){const p=S.p;p.stage=1;p.s0=false;p.j=[2,3];p.hint=-1;render()}
+function jHint(){const p=S.p;if(p.h<1||p.done||p.s0)return;const k=s=>s[0]+','+s[1],q=[[p.j,-1]],seen=new Set([k(p.j)]);while(q.length){const[s,f]=q.shift();if(jDone({stage:p.stage,j:s})){p.hint=f;break}for(let m=0;m<6;m++){const t=jn(s,m);if(!seen.has(k(t))){seen.add(k(t));q.push([t,f<0?m:f])}}}p.h--;render()}
 function ch10(){
- if(!S.p.j)S.p={j:[0,0],h:S.st.eng-1,hint:-1,done:false};const p=S.p;
- return `<h2>Airlock</h2><p class="sub">Chapter 0 of 0</p><p>The lock needs exactly 4 units of coolant in Tank A. Tank A holds 5 units, Tank B holds 3, and there are no markings. Each move costs 1 oxygen. Engineering can compute your next move.</p>
- <div class="tanks"><div class="tank" style="height:140px"><i style="height:${p.j[0]/5*100}%"></i><span>A ${p.j[0]}/5</span></div><div class="tank" style="height:84px"><i style="height:${p.j[1]/3*100}%"></i><span>B ${p.j[1]}/3</span></div></div>
- ${p.done?`<div class="msg">Exactly 4 units. The airlock seals and pressure holds.</div><button class="go" onclick="go(11)">Face the drones</button>`:`${JM.map((l,m)=>`<button class="alt ${p.hint===m?'hint':''}" onclick="jmv(${m})">${l}</button>`).join('')}<br><button class="alt" onclick="jHint()" ${p.h<1?'disabled':''}>Compute next move (${p.h} left)</button>`}`}
+ if(!S.p.j)S.p={j:[0,0],h:S.st.eng-1,hint:-1,stage:0,s0:false,done:false};const p=S.p;
+ const tanks=`<div class="tanks"><div class="tank" style="height:140px"><i style="height:${p.j[0]/5*100}%"></i><span>A ${p.j[0]}/5</span></div><div class="tank" style="height:84px"><i style="height:${p.j[1]/3*100}%"></i><span>B ${p.j[1]}/3</span></div></div>`;
+ const moves=JM.map((l,m)=>`<button class="alt ${p.hint===m?'hint':''}" onclick="jmv(${m})">${l}</button>`).join('')+`<br><button class="alt" onclick="jHint()" ${p.h<1?'disabled':''}>Compute next move (${p.h} left)</button>`;
+ const intro=`Tank A holds 5 units and Tank B holds 3. There are no markings, and each move costs 1 oxygen. Engineering can compute your next move.`;
+ if(p.done)return `<h2>Airlock</h2><p class="sub">Chapter 0 of 0 &middot; Part 2 of 2</p><p>${intro}</p>${tanks}<div class="msg">Exactly 4 units. The airlock seals and pressure holds.</div><button class="go" onclick="go(11)">Face the drones</button>`;
+ if(p.s0)return `<h2>Airlock</h2><p class="sub">Chapter 0 of 0 &middot; Part 1 of 2</p><p>${intro}</p>${tanks}<div class="msg">Exactly 1 unit in Tank B. The coolant loop is primed.</div><button class="go" onclick="jNext()">Start part 2</button>`;
+ if(p.stage)return `<h2>Airlock</h2><p class="sub">Chapter 0 of 0 &middot; Part 2 of 2</p><p><span class="tag">Final charge.</span> The loop has reset to 2 units in Tank A and 3 in Tank B. ${intro} Put exactly 4 units in Tank A.</p>${tanks}${moves}`;
+ return `<h2>Airlock</h2><p class="sub">Chapter 0 of 0 &middot; Part 1 of 2</p><p><span class="tag">Prime the loop.</span> ${intro} Get exactly 1 unit in Tank B.</p>${tanks}${moves}`}
 
 /* ---------- Puzzle 9: drone interrogation ---------- */
 const DR=[['Drone Ax','"Bix is the saboteur."',true],['Drone Bix','"I am not the saboteur."',false],['Drone Cix','"Ax is lying."',false]];
@@ -269,7 +307,7 @@ function ch11(){
 /* ---------- Home menu ---------- */
 function newGame(){fresh();render()}
 function home(){const cont=S.ch!==0&&S.ch!==5;
- return `<div class="hero"><div class="orb" aria-hidden="true"></div><h1>Meridian Drift</h1><p class="lead">A deep space puzzle RPG with no combat. Wake aboard a dying ship and think your way out.</p>
+ return `<div class="hero"><div class="stage" aria-hidden="true"><div class="gtilt"><div class="gal"></div></div><div class="shipwrap"><div class="ship"><svg viewBox="0 0 130 56" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="hl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a2f7a"/><stop offset="1" stop-color="#1c0c2a"/></linearGradient><linearGradient id="fl" x1="1" x2="0"><stop offset="0" stop-color="#ffd0e0"/><stop offset=".4" stop-color="#ff4d6d"/><stop offset="1" stop-color="#8a2be2" stop-opacity="0"/></linearGradient></defs><path class="flame" d="M24 28 L2 21 Q-6 28 2 35 Z" fill="url(#fl)"/><path d="M46 14 L62 2 L76 14Z M46 42 L62 54 L76 42Z" fill="#2f1743" stroke="#9d6cff" stroke-width="1"/><path d="M22 28 L40 14 L96 14 L124 28 L96 42 L40 42Z" fill="url(#hl)" stroke="#b58cff" stroke-width="1.2"/><path d="M30 28 H112" stroke="#ff4d6d" stroke-opacity=".5" stroke-width="1"/><ellipse class="lt c" cx="100" cy="28" rx="10" ry="5" fill="#ff6b8a"/><circle class="lt" cx="48" cy="28" r="2.6" fill="#ffe2a8"/><circle class="lt b" cx="58" cy="28" r="2.6" fill="#ffe2a8"/><circle class="lt d" cx="68" cy="28" r="2.6" fill="#ffe2a8"/><circle class="lt c" cx="78" cy="28" r="2.6" fill="#ffe2a8"/><circle class="lt" cx="62" cy="2" r="2.8" fill="#ff3355"/><circle class="lt b" cx="62" cy="54" r="2.8" fill="#c58bff"/></svg></div></div></div><h1>Meridian Drift</h1><p class="lead">A deep space puzzle RPG with no combat. Wake aboard a dying ship and think your way out.</p>
  <div class="menu"><button class="go big" onclick="newGame()">New game</button>${cont?'<button class="alt big" onclick="S.home=false;render()">Continue</button>':''}<button class="alt big" onclick="S.how=!S.how;render()">How to play</button><button class="alt big" onclick="mute=!mute;render()">Sound ${mute?'off':'on'}</button></div>
  ${S.how?`<div class="how"><ul><li><b>Choose skills.</b> Spend points on Engineering, Cryptology, Empathy and Perception. Each helps in different puzzles.</li><li><b>Watch your air.</b> Mistakes drain oxygen. At zero you restart the room.</li><li><b>Level up.</b> Every puzzle earns XP, and each level gives you a stat point.</li></ul><b>The ten puzzles</b><ol class="plist">${PN.map((n,i)=>`<li>${n} <small>(${PS[i]})</small></li>`).join('')}</ol></div>`:''}</div>`}
 
